@@ -1,14 +1,9 @@
 package linkedlist
 
 func DeleteNode(x *Node) {
-	if x == nil {
+	if x == nil || x.Next == nil {
 		return
 	}
-	prev := x
-	for x.Next != nil {
-		x.Value = x.Next.Value
-		prev = x
-		x = x.Next
-	}
-	prev.Next = nil
+	x.Value = x.Next.Value
+	x.Next = x.Next.Next
 }
