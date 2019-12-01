@@ -34,34 +34,34 @@ func TestLoop(t *testing.T) {
 	}
 }
 
-// func TestLoopNoLoop(t *testing.T) {
-// 	l := &Node{
-// 		Value: 1,
-// 		Next: &Node {
-// 			Value: 2,
-// 			Next: &Node {
-// 				Value: 3,
-// 				Next: &Node {
-// 					Value: 4,
-// 					Next: &Node {
-// 						Value: 5,
-// 						Next: &Node {
-// 							Value: 6,
-// 							Next: &Node {
-// 								Value: 7,
-// 								Next: &Node{
-// 									Value: 8,
-// 								},
-// 							},
-// 						},
-// 					},
-// 				},
-// 			},
-// 		},
-// 	}
+func TestLoopNoLoop(t *testing.T) {
+	l := &Node{
+		Value: 1,
+		Next: &Node {
+			Value: 2,
+			Next: &Node {
+				Value: 3,
+				Next: &Node {
+					Value: 4,
+					Next: &Node {
+						Value: 5,
+						Next: &Node {
+							Value: 6,
+							Next: &Node {
+								Value: 7,
+								Next: &Node{
+									Value: 8,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	}
 
-// 	loop := Loop(l)
-// 	if loop != nil {
-// 		t.Errorf("there is no loop actually")
-// 	}
-// }
+	loop := Loop(l)
+	if loop != nil {
+		t.Errorf("there is no loop actually")
+	}
+}
